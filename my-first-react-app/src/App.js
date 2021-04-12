@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ToDoList from './components/ToDoList/ToDoList.js';
 import InputField from './components/ToDoList/InputField.js'
@@ -14,6 +13,7 @@ function App() {
           <SubmitButton />
         </p>
       </header>
+      <script type="module" src="otherApp.js"></script> 
     </div>
   );
 }
