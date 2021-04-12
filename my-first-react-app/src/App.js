@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ToDoList from './components/ToDoList/ToDoList.js';
+import InputField from './components/ToDoList/InputField.js'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <ToDoList />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          <InputField />
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
