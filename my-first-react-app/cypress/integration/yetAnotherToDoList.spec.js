@@ -15,4 +15,11 @@ describe("Checking functionality of YetAnotherToDoList", function(){
         
        cy.get("#save-button")
     })
+
+    it("Shows a list", function() {
+       
+      cy.get('#ToDo').type('something')
+      cy.get('#save-button').click()
+      cy.contains('Something')
+    })
 })

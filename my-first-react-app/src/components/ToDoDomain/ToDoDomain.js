@@ -5,7 +5,7 @@ import SubmitButton from '../Submit/submit'
 class ToDoDomain extends Component{
     constructor(props){
         super(props)
-        this.state = {list: ['a','b']}
+        this.state = {list: []}
         
     }
 
