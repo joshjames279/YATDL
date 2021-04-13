@@ -1,8 +1,6 @@
 import './App.css';
 import ToDoList from './components/ToDoList/ToDoList.js';
-import InputField from './components/ToDoList/InputField.js'
-import SubmitButton from './components/ToDoList/submit.js';
-import List from './components/ToDoList/List';
+import ToDoDomain from './components/ToDoDomain/ToDoDomain';
 
 function App() {
   return (
@@ -10,12 +8,9 @@ function App() {
       <header className="App-header">
         <ToDoList />
         <p>
-          <InputField />
-          <SubmitButton />
-          <List />
+          <ToDoDomain/>
         </p>
       </header>
-      <script type="module" src="otherApp.js"></script> 
     </div>
   );
 }
