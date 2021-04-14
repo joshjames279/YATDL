@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import InputField from '../InputField/InputField'
-import SubmitButton from '../Submit/submit'
 
 class ToDoDomain extends Component{
     constructor(props){
@@ -9,30 +8,25 @@ class ToDoDomain extends Component{
         
     }
 
-  addList = () => {
-    console.log(this.state)
-    var list = this.state;
-    
-    list.push(this.newText.value);
-    
-    this.setState({list});
+  addList = () => { 
+    const el = document.getElementById('ToDo')
+    const newList = this.state.list
+    newList.push(el.value);
+    this.setState({list: newList});
   }
 
   render() {
-  
     return (
       <div>
-        <InputField ref={(ip) => {this.newText = ip}} key={this.newText}/>
-        <SubmitButton onSubmit={this.addList} key={this.newText}/>
-        <ul>
+        <InputField />
+        <button id="Save-button" onClick={this.addList}>Save</button>
         {this.state.list.map((item, index) => {
           return(
           <div>
-          <input type="checkbox" /><label key={index}>{item}</label>
+          <input id="checkbox-0" type="checkbox" /><label id="text-0" key={index}>{item}</label>
           </div>
           )
           })}
-        </ul>
       </div>
     );
   }
