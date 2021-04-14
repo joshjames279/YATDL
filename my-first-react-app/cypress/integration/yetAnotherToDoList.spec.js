@@ -13,13 +13,23 @@ describe("Checking functionality of YetAnotherToDoList", function(){
 
     it("Shows a save button", function() {
         
-       cy.get("#save-button")
+       cy.get("#Save-button")
     })
 
     it("Shows a list", function() {
        
       cy.get('#ToDo').type('something')
-      cy.get('#save-button').click()
-      cy.contains('Something')
+      cy.get('#Save-button').click()
+      cy.contains('something')
+    })
+
+    it("Shows a list of multiple things", function() {
+       
+      cy.get('#ToDo').type('something')
+      cy.get('#Save-button').click()
+      cy.get('#ToDo').type('else')
+      cy.get('#Save-button').click()
+      cy.contains('something')
+      cy.contains('else')
     })
 })
