@@ -48,5 +48,17 @@ describe("Checking functionality of YetAnotherToDoList", function(){
       cy.contains('else')
     })
 
+    it("Shows a list and we can markthrough when checkbox ticked", function() {
+       
+      cy.get('#ToDo').type('something')
+      cy.get('#Save-button').click()
+      cy.get('#ToDo').clear()
+      cy.get('#ToDo').type('else')
+      cy.get('#Save-button').click()
+      cy.get('#item-0-checkbox').click()
+      cy.get('#Clear').click()
+      cy.get('#item-0-text').should('not.exist')
+      cy.get('#item-1-text').should('not.exist')
+    })
 
 })
