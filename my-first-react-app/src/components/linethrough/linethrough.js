@@ -22,8 +22,8 @@ handleclick =() => {
   render(){
       return(
           <div>
-            <input id={`#item-${this.props.id}-checkbox`} type="checkbox" onClick = {this.handleclick} />
-            <span id={`#item-${this.props.id}-text`} style ={{textDecoration: this.state.textDecoration}}>{this.props.text} </span>
+            <input id={`item-${this.props.id}-checkbox`} type="checkbox" onClick = {this.handleclick} />
+            <span id={`item-${this.props.id}-text`} style ={{textDecoration: this.state.textDecoration}}>{this.props.text} </span>
           
           </div>
       )

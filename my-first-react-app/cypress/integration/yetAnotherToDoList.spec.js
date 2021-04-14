@@ -27,6 +27,7 @@ describe("Checking functionality of YetAnotherToDoList", function(){
        
       cy.get('#ToDo').type('something')
       cy.get('#Save-button').click()
+      cy.get('#ToDo').clear()
       cy.get('#ToDo').type('else')
       cy.get('#Save-button').click()
       cy.contains('something')
@@ -37,8 +38,15 @@ describe("Checking functionality of YetAnotherToDoList", function(){
        
       cy.get('#ToDo').type('something')
       cy.get('#Save-button').click()
-      cy.get('#ToDo-0-checkbox').click()
-      cy.get('#text-0-text').should('have.css', 'text-decoration', 'line-through')
+      cy.get('#ToDo').clear()
+      cy.get('#ToDo').type('else')
+      cy.get('#Save-button').click()
+      cy.get('#item-0-checkbox').click()
+      cy.get('#item-0-text').should('have.css', 'text-decoration', 'line-through solid rgb(0, 0, 0)')
       cy.contains('something')
+      cy.get('#item-1-text').should('have.css', 'text-decoration', 'none solid rgb(0, 0, 0)')
+      cy.contains('else')
     })
+
+
 })
