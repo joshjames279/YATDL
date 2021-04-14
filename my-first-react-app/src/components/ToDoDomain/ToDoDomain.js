@@ -9,7 +9,7 @@ class ToDoDomain extends Component{
     }
 
   addList = () => { 
-    const el = document.getElementById('ToDo')
+    let el = document.getElementById('ToDo')
     const newList = this.state.list
     newList.push(el.value);
     this.setState({list: newList});
