@@ -25,7 +25,7 @@ class ToDoDomain extends Component{
       <div>
         <InputField />
         <button id="Save-button" onClick={this.addList}>Save</button>
-        <div><a id="Clear-button" onClick={this.clear} href="#">Clear</a></div>
+        <div><a id="Clear-button" onClick={this.clear} href="c">Clear</a></div>
         
         {this.state.list.map((item, index) => {
           return(
