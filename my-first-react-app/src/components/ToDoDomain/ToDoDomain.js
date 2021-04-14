@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import InputField from '../InputField/InputField'
+import Linethrough from '../linethrough/linethrough.js'
 
 class ToDoDomain extends Component{
     constructor(props){
@@ -20,10 +21,11 @@ class ToDoDomain extends Component{
       <div>
         <InputField />
         <button id="Save-button" onClick={this.addList}>Save</button>
+        
         {this.state.list.map((item, index) => {
           return(
           <div>
-          <input id="checkbox-0" type="checkbox" /><label id="text-0" key={index}>{item}</label>
+          < Linethrough /><label id="text-0" key={index}>{item}</label>
           </div>
           )
           })}
