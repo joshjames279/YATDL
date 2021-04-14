@@ -32,4 +32,13 @@ describe("Checking functionality of YetAnotherToDoList", function(){
       cy.contains('something')
       cy.contains('else')
     })
+
+    it("Shows a list and we can markthrough when checkbox ticked", function() {
+       
+      cy.get('#ToDo').type('something')
+      cy.get('#Save-button').click()
+      cy.get('#ToDo-0-checkbox').click()
+      cy.get('#text-0-text').should('have.css', 'text-decoration', 'line-through')
+      cy.contains('something')
+    })
 })
