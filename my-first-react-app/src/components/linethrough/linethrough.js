@@ -5,8 +5,7 @@ class linethrough extends Component{
         super(props)
         this.state = {
             checked: false,
-            textDecoration: '',
-            
+            textDecoration: '',  
         }
     }
 

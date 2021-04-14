@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ToDoList />
+      <ToDoList text="Yet Another Todo List!"/>
         <p>
           <ToDoDomain/>
         </p>

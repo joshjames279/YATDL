@@ -1,8 +1,12 @@
 import React, {Component} from 'react'
 
 class ToDoList extends Component{
+    constructor(props){
+        super(props)
+        this.state = {text: ''}
+    }
     render() {
-        return <h1>Yet Another Todo List!</h1>
+        return <h1>{this.props.text}</h1>
     }
 }
 
