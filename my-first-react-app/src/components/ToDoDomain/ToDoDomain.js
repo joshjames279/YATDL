@@ -11,9 +11,8 @@ class ToDoDomain extends Component{
 
   addList = () => { 
     let el = document.getElementById('ToDo')
-    const newList = this.state.list
-    newList.push(el.value);
-    this.setState({list: newList});
+    this.state.list.push(el.value);
+    this.setState({list: this.state.list});
   }
 
   clear = () => {
